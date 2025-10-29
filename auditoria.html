@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendá tu Auditoría - Impulso Co</title>
+  <!-- Favicon -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="theme-color" content="#1E5EE8">
+
+
+  <!-- Fuentes + CSS principal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #333;
+    }
+
+    .audit-hero {
+      background: linear-gradient(135deg, #1E5EE8 0%, #00D4AA 100%);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+    .audit-hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+    .audit-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .audit-benefits {
+      background: #f3f7fb;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .audit-benefits h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #1E5EE8;
+    }
+    .benefit-list {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .benefit-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .benefit-card h3 {
+      color: #00D4AA;
+      margin-bottom: 10px;
+    }
+    .benefit-card p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .audit-calendar {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .audit-calendar h2 {
+      font-size: 28px;
+      color: #1E5EE8;
+      margin-bottom: 30px;
+    }
+    .calendly-inline-widget {
+      min-width: 320px;
+      height: 920px; /* escritorio */
+    }
+    @media (max-width: 1024px) {
+      .calendly-inline-widget { height: 1040px; }
+    }
+    @media (max-width: 768px) {
+      .calendly-inline-widget { height: 1280px; }
+    }
+    @media (max-width: 420px) {
+      .calendly-inline-widget { height: 1420px; }
+    }
+
+    footer.main-footer {
+      background: #1E5EE8;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <img src="images/Logo Impulsa Co.png" alt="Logo de Impulso Co" class="logo">
+      </a>
+      <nav class="main-nav">
+        <ul id="main-menu">
+          <li><a href="index.html#metodo">Método</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#contacto" class="btn-primary">Hablemos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main>
+    <section class="audit-hero">
+      <h1>Agendá tu Auditoría Gratuita</h1>
+      <p>En 30’ analizamos tu comunicación y tus ventas para detectar oportunidades reales de crecimiento. Sin compromiso, solo valor.</p>
+    </section>
+
+    <section class="audit-benefits">
+      <h2>¿Qué te llevás de esta sesión?</h2>
+      <div class="benefit-list">
+        <div class="benefit-card">
+          <h3>📊 Diagnóstico</h3>
+          <p>Detectamos qué hoy frena tus resultados.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>💡 Estrategia</h3>
+          <p>Acciones concretas para optimizar comunicación y ventas.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>🚀 Plan</h3>
+          <p>Un mini roadmap con próximos pasos para crecer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="audit-calendar">
+      <h2>Elegí el día y horario que mejor te quede</h2>
+
+      <!-- Calendly Embed -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/marianosicher/30min?hide_gdpr_banner=1&timezone=America%2FArgentina%2FBuenos_Aires">
+      </div>
+      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+      <p style="margin-top:12px;font-size:14px;color:#6b7280">
+        ¿No carga el calendario?
+        <a href="https://calendly.com/marianosicher/30min?timezone=America%2FArgentina%2FBuenos_Aires"
+           target="_blank" rel="noopener"
+           style="color:#1E5EE8;text-decoration:underline">
+          Abrilo en una pestaña nueva
+        </a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="main-footer" style="background:#1E5EE8; color:#fff;">
+    <div class="container" style="text-align:center; padding:35px 20px;">
+      <img src="images/Logo Impulsa Co.png" alt="Logo Impulso Co" style="height:50px; margin-bottom:15px;">
+  
+      <p style="margin-bottom:15px; font-size:15px;">
+        Comunicación + Ventas = Crecimiento Real 🚀
+      </p>
+  
+      <div class="social-links" style="display:flex; justify-content:center; gap:20px; margin-bottom:15px;">
+  
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/impulsoco.ar/" target="_blank" rel="noopener"
+           aria-label="Instagram Impulso Co"
+           style="color:#fff; background:#E1306C; padding:10px; border-radius:50%; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; transition:all 0.3s;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke-width="1.6" stroke="white" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M7.75 2.5h8.5a5.25 5.25 0 015.25 5.25v8.5a5.25 5.25 0 01-5.25 5.25h-8.5A5.25 5.25 0 012.5 16.25v-8.5A5.25 5.25 0 017.75 2.5z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16 11.37a4 4 0 11-7.999-.001A4 4 0 0116 11.37zM17.5 6.5h.01" />
+          </svg>
+        </a>
+  
+        <!-- LinkedIn (próximamente) -->
+        <a href="#" aria-label="LinkedIn Impulso Co (próximamente)"
+           style="color:#fff; background:#0A66C2; padding:10px; border-radius:50%; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; opacity:0.6; cursor:not-allowed;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke-width="1.6" stroke="white" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2zM4 3a2 2 0 110 4 2 2 0 010-4z" />
+          </svg>
+        </a>
+  
+      </div>
+  
+      <p style="margin-top:5px; font-size:14px;">
+        📧 <a href="mailto:contacto@impulsoco.com.ar" style="color:#fff; text-decoration:underline;">
+        contacto@impulsoco.com.ar</a>
+      </p>
+  
+      <p style="margin-top:15px; font-size:13px; opacity:0.8;">
+        &copy; 2025 Impulso Co. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+</footer>
+
+<!-- BOTÓN VOLVER ARRIBA -->
+<button id="btnTop" title="Volver arriba">↑</button>
+
+<script>
+  const btnTop = document.getElementById("btnTop");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btnTop.style.display = "flex";
+    } else {
+      btnTop.style.display = "none";
+    }
+  };
+  btnTop.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+</body>
+</html>
+
+  
