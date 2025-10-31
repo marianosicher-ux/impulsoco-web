@@ -28,29 +28,31 @@
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <a href="index.html">
-                <img src="images/Logo Impulsa Co.png" alt="Logo de Impulso Co" class="logo">
-            </a>
+<header>
+  <div class="container">
+    <a href="index.html" aria-label="Ir al inicio">
+      <img src="images/Logo Impulsa Co.png" alt="Impulso Co" class="logo">
+    </a>
 
-            <nav class="main-nav">
-                <ul id="main-menu">
-                    <li><a href="#metodo">Método</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto" class="btn-primary">Hablemos</a></li>
-                </ul>
+    <nav class="main-nav" aria-label="Principal">
+      <ul id="main-menu">
+        <li><a href="index.html#metodo">Método</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto" class="btn-primary">Hablemos</a></li>
+      </ul>
 
-                <button class="hamburger-menu" id="hamburger-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </nav>
-        </div>
-    </header>
+      <!-- Botón hamburguesa (mismo id en ambas páginas) -->
+      <button class="hamburger-menu" id="hamburger"
+              aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
 
     <!-- MAIN -->
     <main>
@@ -285,6 +287,7 @@
 </script>
 </body>
 </html>
+
 
 
 
