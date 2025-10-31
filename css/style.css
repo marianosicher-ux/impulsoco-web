@@ -364,3 +364,48 @@ header{
   .team-grid{ grid-template-columns: 1fr; }
   .hero h1{ font-size:38px; }
 }
+/* Mantener el header siempre delante del panel móvil */
+header { position: relative; z-index: 1000; }
+
+/* Estado base del botón */
+.hamburger-menu {
+  display: none;
+  flex-direction: column; justify-content: space-around;
+  width: 30px; height: 25px; background: transparent; border: 0; cursor: pointer;
+}
+.hamburger-menu .bar { width: 100%; height: 3px; background: var(--gris-oscuro-texto); border-radius: 3px; transition: all .3s; }
+
+/* ===== MÓVIL ===== */
+@media (max-width: 768px) {
+  /* Ocultar lista por defecto */
+  .main-nav ul { display: none; }
+
+  /* Mostrar el botón */
+  .hamburger-menu { display: flex; }
+
+  /* Cuando se abre el menú… */
+  .main-nav.open ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    position: fixed;
+    top: 0; right: 0;
+    width: 78%;
+    max-width: 340px;
+    height: 100vh;
+
+    padding: 90px 24px 24px;
+    background: #fff;
+    box-shadow: -12px 0 30px rgba(0,0,0,.18);
+    z-index: 1100;
+  }
+  .main-nav.open ul a {
+    color: var(--gris-oscuro-texto);
+    font-size: 18px;
+  }
+
+  /* Evitar scroll del body cuando el menú está abierto */
+  body.no-scroll { overflow: hidden; }
+}
+
