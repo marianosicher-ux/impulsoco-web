@@ -285,8 +285,45 @@
   ]
 }
 </script>
+    <script>
+  (function () {
+    const btn  = document.getElementById('hamburger');
+    const nav  = document.querySelector('.main-nav');
+    const menu = document.getElementById('main-menu');
+
+    if (!btn || !nav || !menu) return;
+
+    function open() {
+      nav.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('no-scroll');
+    }
+    function close() {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('no-scroll');
+    }
+    function toggle() {
+      nav.classList.contains('open') ? close() : open();
+    }
+
+    btn.addEventListener('click', toggle);
+
+    // Cerrar al tocar un link del menú
+    menu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') close();
+    });
+
+    // Cerrar con ESC
+    window.addEventListener('keyup', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  })();
+</script>
+
 </body>
 </html>
+
 
 
 
